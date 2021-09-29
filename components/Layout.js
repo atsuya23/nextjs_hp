@@ -1,9 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from 'next/image'
 
 export default function Layout({ children, title = "HP by Nextjs" }) {
   return (
-    <div className="flex justify-center flex-col min-h-screen text-gray-600 text-sm font-mono">
+    <div className="flex justify-center items-center flex-col min-h-screen text-gray-600 text-sm font-mono">
       <Head>
         <title>{title}</title>
       </Head>
@@ -12,17 +13,17 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
           <div className="flex items-center pl-8 h-14">
             <div className="flex space-x-4">
               <Link href="/">
-                <a className="text-gray-300 hover:bg-gray-600 px-3 py-w rounded">
+                <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
                   Home
                 </a>
               </Link>
               <Link href="/blog-page">
-                <a className="text-gray-300 hover:bg-gray-600 px-3 py-w rounded">
+                <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
                   Blog
                 </a>
               </Link>
               <Link href="/contact-page">
-                <a className="text-gray-300 hover:bg-gray-600 px-3 py-w rounded">
+                <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
                   Contact
                 </a>
               </Link>
@@ -41,7 +42,8 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
           rel="noopener noreferrer"
         >
           Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
+          {/* <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" /> */}
+          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
         </a>
       </footer>
     </div>
